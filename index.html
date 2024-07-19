@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프레젠테이션</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .filter-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem 0;
+            background: #fff;
+            margin: 1rem auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            border-radius: 10px;
+        }
+
+        .filters {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .filters .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .filters label {
+            display: inline-block;
+            margin-right: 0.5rem;
+            text-align: right;
+            width: 80px;
+        }
+
+        .filters input[type="text"], .filters input[type="date"], .filters select {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 1rem;
+            flex: 1;
+        }
+
+        .filters .row span {
+            margin: 0 0.5rem;
+        }
+
+        .filters .row input[type="date"] {
+            width: calc(50% - 1rem);
+        }
+
+        .search-button {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+        }
+
+        .search-button:hover {
+            background: #555;
+        }
+
+        .data-container {
+            display: flex;
+            width: 80%;
+            margin: 2rem auto;
+        }
+
+        .checkbox-section {
+            width: 22%;
+            padding-right: 1rem;
+            margin-right: 1rem;
+        }
+
+        .checkbox-section h3 {
+            margin-top: 0;
+            font-size: 1rem;
+        }
+
+        .checkbox-section ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .checkbox-section li {
+            width: 45%;
+            margin-bottom: 0.5rem;
+        }
+
+        .table-section {
+            width: 78%;
+            background: #fff;
+            padding: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            width: 22%;
+            margin: 2rem auto;
+        }
+
+        .info-section {
+            background: #fff;
+            padding: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .info-section h2, .info-section h3 {
+            margin: 0 0 1rem 0;
+        }
+
+        .info-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .info-section .title {
+            font-weight: bold;
+        }
+
+        .info-section .count {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>프레젠테이션 제목</h1>
+    </header>
+    <section class="filter-section">
+        <div class="filters">
+            <div class="row">
+                <label for="filter">필터:</label>
+                <select id="filter">
+                    <option value="">전체</option>
+                    <option value="">출원인</option>
+                    <option value="">카테고리</option>
+                    
+                </select>
+                <label for="search">검색어:</label>
+                <input type="text" id="search" name="search">
+            </div>
+            <div class="row">
+                <label for="start-date">출원일자:</label>
+                <input type="date" id="start-date" name="start-date">
+                <span>~</span>
+                <input type="date" id="end-date" name="end-date">
+                <button type="button" class="search-button">검색</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="data-container">
+        <div class="checkbox-section">
+            <h3>응용분야</h3>
+            <ul>
+                <li><input type="checkbox" id="general" name="general"><label for="general"> 제너럴</label></li>
+                <li><input type="checkbox" id="medical" name="medical"><label for="medical"> 의료</label></li>
+                <li><input type="checkbox" id="e-commerce" name="e-commerce"><label for="e-commerce"> 전자·상거래</label></li>
+                <li><input type="checkbox" id="automotive" name="automotive"><label for="automotive"> 자동차</label></li>
+                <li><input type="checkbox" id="finance" name="finance"><label for="finance"> 금융</label></li>
+                <li><input type="checkbox" id="education" name="education"><label for="education"> 교육</label></li>
+                <li><input type="checkbox" id="agriculture" name="agriculture"><label for="agriculture"> 농업</label></li>
+                <li><input type="checkbox" id="entertainment" name="entertainment"><label for="entertainment"> 엔터테인먼트</label></li>
+                <li><input type="checkbox" id="security" name="security"><label for="security"> 보안</label></li>
+                <li><input type="checkbox" id="automation" name="automation"><label for="automation"> 자동화시스템</label></li>
+                <li><input type="checkbox" id="semiconductor" name="semiconductor"><label for="semiconductor"> 반도체</label></li>
+            </ul>
+            <div class="info-container">
+                <div class="info-section">
+                    <h2>출원인 (총 건수: 15)</h2>
+                    <h3>최대 특허 출원 출원인</h3>
+                    <ul>
+                        <li><span class="title">삼성 전자:</span> 1,223 건</li>
+                        <li><span class="title">엘지 전자:</span> 1,012 건</li>
+                        <li><span class="title">현대:</span> 980 건</li>
+                        <!-- 추가 데이터 행 -->
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>최대 특허 출원 출원인 (STARTUPs)</h3>
+                    <ul>
+                        <li><span class="title">인피닉:</span> 125 건</li>
+                        <li><span class="title">뤼이드:</span> 86 건</li>
+                        <li><span class="title">크라우드웍스:</span> 86 건</li>
+                        <li><span class="title">딥브레인에이아이:</span> 73 건</li>
+                        <!-- 추가 데이터 행 -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>컬럼 1</th>
+                        <th>컬럼 2</th>
+                        <th>컬럼 3</th>
+                        <th>컬럼 4</th>
+                        <th>컬럼 5</th>
+                        <th>컬럼 6</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>데이터 1</td>
+                        <td>데이터 2</td>
+                        <td>데이터 3</td>
+                        <td>데이터 4</td>
+                        <td>데이터 5</td>
+                        <td>데이터 6</td>
+                    </tr>
+                    <!-- 추가 데이터 행 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

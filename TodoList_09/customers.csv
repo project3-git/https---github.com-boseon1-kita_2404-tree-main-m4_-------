@@ -1,0 +1,4 @@
+id,username,email,age,created_at
+2,alice,alice@example.com,25,2024-07-15 12:17:13
+3,bob,bob@example.com,28,2024-07-15 12:17:13
+4,charlie,charlie@example.com,22,2024-07-15 12:17:13

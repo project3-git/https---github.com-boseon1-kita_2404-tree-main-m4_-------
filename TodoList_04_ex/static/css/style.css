@@ -1,0 +1,106 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    margin : 0px;
+    padding : 20px;
+    background-color: #e0f7fa;
+  }
+
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+
+  form{
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  label{
+    font-weight: bold;
+    color: #00796b;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  textarea{
+    width : calc(100% - 16px);
+    padding:8px;
+    margin : 10px 0;
+    border : 1px solid #b0bec5;
+    border-radius: 4px;
+    box-sizing: border-box;
+    max-width: 400px;
+  }
+
+  input[type="submit"] {
+    background-color: #00796b;
+    color:white;
+    padding: 10px 20px;
+    border : none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+    
+  }
+
+  input[type='submit']:hover {
+    background-color: #004d40;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  li{
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    /* 수평 및 수직 이동없이 요소 주위에 부드럽고 퍼진 매우 옅은 검은색 그림자 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  a {
+    color : #00796b;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: #004d40;
+    text-decoration: underline;
+  }
+
+  p {
+    max-width: 600px;
+    margin-left: auto; 
+    margin-right: auto;
+    color: #00796b;
+  }
+
+  .centered {
+    text-align: center;
+  }
+
+  .custom-link {
+    color: #350965;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  

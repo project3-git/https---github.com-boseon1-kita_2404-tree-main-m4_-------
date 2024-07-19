@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin : 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+}
+
+form{
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label{
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+textarea{
+    width :100%;
+    padding:8px;
+    margin : 10px 0;
+    border : 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color:white;
+    padding: 10px 15px;
+    border : none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type='submit']:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    /* 수평 및 수직 이동없이 요소 주위에 부드럽고 퍼진 매우 옅은 검은색 그림자 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    margin-left: 10px;
+    color : #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
